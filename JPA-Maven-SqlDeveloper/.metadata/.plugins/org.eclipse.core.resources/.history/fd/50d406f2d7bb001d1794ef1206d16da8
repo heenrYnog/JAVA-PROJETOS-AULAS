@@ -1,0 +1,94 @@
+package dominio;
+import java.util.Calendar;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
+public class Paciente {
+
+	private String nome;
+	@Id 
+	private double rg;
+	private String endereco;
+	private double telefone;
+	private Calendar dtNascimento;
+	private String profissao;
+	private String email;
+
+	public Paciente() {
+
+	}
+
+	public Paciente(String nome, double rg, String endereco, double telefone, Calendar dtNascimento, String profissao,
+			String email) {
+		this.nome = nome;
+		this.endereco = endereco;
+		this.telefone = telefone;
+		this.dtNascimento = dtNascimento;
+		this.profissao = profissao;
+		this.email = email;
+
+	}
+
+	@Override
+	public String toString() {
+		return "Paciente [nome=" + nome + ", rg=" + rg + ", endereco=" + endereco + ", telefone=" + telefone
+				+ ", dtNascimento=" + dtNascimento + ", profissao=" + profissao + ", email=" + email + "]";
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public double getRg() {
+		return rg;
+	}
+
+	public void setRg(double rg) {
+		this.rg = rg;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public double getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(double telefone) {
+		this.telefone = telefone;
+	}
+
+	public Calendar getDtNascimento() {
+		return dtNascimento;
+	}
+
+	public void setDtNascimento(Calendar dtNascimento) {
+		this.dtNascimento = dtNascimento;
+	}
+
+	public String getProfissao() {
+		return profissao;
+	}
+
+	public void setProfissao(String profissao) {
+		this.profissao = profissao;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+}

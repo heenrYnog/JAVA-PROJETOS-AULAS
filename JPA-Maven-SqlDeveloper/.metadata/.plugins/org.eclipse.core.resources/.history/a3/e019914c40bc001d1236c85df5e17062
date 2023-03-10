@@ -1,0 +1,101 @@
+package dominio;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
+public class Paciente implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	private String nome;
+	@Id 
+	private String rg;
+	private String endereco;
+	private Long telefone;
+	@Column (name = "DATA_NASC")
+	private SimpleDateFormat dtNascimento;
+	private String profissao;
+	private String email;
+
+	public Paciente() {
+
+	}
+
+	public Paciente(String nome, String rg, String endereco, Long telefone, SimpleDateFormat dtNascimento, String profissao,
+			String email) {
+		this.nome = nome;
+		this.rg = rg;
+		this.endereco = endereco;
+		this.telefone = telefone;
+		this.dtNascimento = dtNascimento;
+		this.profissao = profissao;
+		this.email = email;
+
+	}
+
+	@Override
+	public String toString() {
+		return "Paciente [nome=" + nome + ", rg=" + rg + ", endereco=" + endereco + ", telefone=" + telefone
+				+ ", dtNascimento=" + dtNascimento + ", profissao=" + profissao + ", email=" + email + "]";
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getRg() {
+		return rg;
+	}
+
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public Long getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(Long telefone) {
+		this.telefone = telefone;
+	}
+
+	public SimpleDateFormat getDtNascimento() {
+		return dtNascimento;
+	}
+
+	public void setDtNascimento(SimpleDateFormat dtNascimento) {
+		this.dtNascimento = dtNascimento;
+	}
+
+	public String getProfissao() {
+		return profissao;
+	}
+
+	public void setProfissao(String profissao) {
+		this.profissao = profissao;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+}
